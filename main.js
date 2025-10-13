@@ -37,16 +37,3 @@ if (emailBtn) {
     window.location.href = `mailto:endeavor@example.com?subject=${subject}&body=${body}`;
   });
 }
-
-// Lightbox
-function openLightbox(imgElement) {
-  const box = document.getElementById("lightbox");
-  const boxImg = document.getElementById("lightbox-img");
-  if (!box || !boxImg) return;
-  boxImg.src = imgElement.src;
-  box.style.display = "flex";
-}
-function closeLightbox() {
-  const box = document.getElementById("lightbox");
-  if (box) box.style.display = "none";
-}
