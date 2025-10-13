@@ -1,39 +1,51 @@
-// Footer year
-window.addEventListener("DOMContentLoaded", () => {
-  const yearEl = document.getElementById("year");
+// Year in footer
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-// SMS booking — opens the user's SMS app prefilled
-const form = document.getElementById("requestForm");
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const vehicleClass = document.getElementById("class").value;
-    const weeks = document.getElementById("weeks").value;
-    const notes = document.getElementById("notes").value.trim();
+// Simple SMS + mail compose from the form
+document.addEventListener('submit', (e) => {
+  const form = e.target;
+  if (form.id !== 'requestForm') return;
 
-    const msg =
-`Request from ${name}
-Phone: ${phone}
-Vehicle: ${vehicleClass}
-Weeks: ${weeks}
-${notes ? "Notes: " + notes + "\n" : ""}- Sent from Endeavor Car Rentals`;
+  e.preventDefault();
 
-    // main number for SMS:
-    window.location.href = `sms:+14123390109?&body=${encodeURIComponent(msg)}`;
-  });
-}
+  const name = document.getElementById('name')?.value?.trim() || '';
+  const phone = document.getElementById('phone')?.value?.trim() || '';
+  const email = document.getElementById('email')?.value?.trim() || '';
+  const vehicleClass = document.getElementById('class')?.value || '';
+  const pickupDate = document.getElementById('pickupDate')?.value || '';
+  const weeks = document.getElementById('weeks')?.value || '';
+  const notes = document.getElementById('notes')?.value?.trim() || '';
 
-// Email button (optional)
-const emailBtn = document.getElementById("emailBtn");
-if (emailBtn) {
-  emailBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const subject = encodeURIComponent("Endeavor Car Request");
-    const body = encodeURIComponent("Hi Endeavor Team,\n\nI’d like to request a car rental.\n\nThanks!");
-    window.location.href = `mailto:endeavor@example.com?subject=${subject}&body=${body}`;
-  });
-}
+  const parts = [
+    `Name: ${name}`,
+    `Phone: ${phone}`,
+    email ? `Email: ${email}` : null,
+    vehicleClass ? `Class: ${vehicleClass}` : null,
+    pickupDate ? `Pickup: ${pickupDate}` : null,
+    weeks ? `Weeks: ${weeks}` : null,
+    notes ? `Notes: ${notes}` : null
+  ].filter(Boolean);
+
+  const text = encodeURIComponent(`Rental Request\n${parts.join('\n')}`);
+
+  // Open SMS to primary number (iOS/Android will pick messaging app)
+  window.location.href = `sms:+14123390109?&body=${text}`;
+});
+
+// Optional: Email button fills a mailto compose
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('#emailBtn');
+  if (!btn) return;
+
+  e.preventDefault();
+  const name = document.getElementById('name')?.value?.trim() || '';
+  const vehicleClass = document.getElementById('class')?.value || '';
+  const subject = encodeURIComponent(`Rental Request from ${name || 'Customer'}`);
+  const body = encodeURIComponent(
+    `Hello Endeavor,\n\nI'd like to request a rental.\n\nName: ${name}\nClass: ${vehicleClass}\n\nThank you!`
+  );
+  window.location.href = `mailto:info@example.com?subject=${subject}&body=${body}`;
+});
