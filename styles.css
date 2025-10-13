@@ -60,27 +60,52 @@ hr { border: 0; border-top: 1px solid #292933; margin: 16px 0; }
 .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .gallery img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; border:1px solid #242432; }
 
-/* Inventory Grid */
-.inventory-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px; justify-content: center; align-items: start;
+/* Inventory headline */
+.inventory-title {
+  font-size: clamp(32px, 7vw, 64px);
+  line-height: 1.1;
+  text-align: left;
+  margin: 0 0 18px;
+  font-weight: 900;
 }
-.inventory-card {
-  background: #111; border: 1px solid #333; border-radius: 8px; overflow: hidden;
-  text-align: center; transition: transform .3s ease, box-shadow .3s ease; cursor: pointer;
-}
-.inventory-card img { width: 100%; height: 150px; object-fit: cover; border-bottom: 1px solid #333; }
-.inventory-card h3 { margin: 10px 0 4px; color: #fff; }
-.inventory-card p { color: #bbb; font-size: 14px; margin-bottom: 10px; }
-.inventory-card:hover { transform: translateY(-5px); box-shadow: 0 0 10px rgba(255,0,0,.2); }
 
-/* Lightbox */
-.lightbox {
-  display: none; position: fixed; z-index: 9999; inset: 0;
-  background: rgba(0,0,0,.85); justify-content: center; align-items: center; padding: 20px;
+/* Photo grid layout */
+.inventory-grid.gallery-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 22px;
 }
-.lightbox img { max-width: 90%; max-height: 85%; border: 2px solid #fff; border-radius: 8px; }
+
+/* Card look */
+.inv-card {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.inv-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Text below image */
+.inv-card h3 {
+  margin: 10px 0 4px;
+  font-size: 20px;
+  color: #fff;
+}
+.inv-card .meta {
+  margin: 0 0 10px;
+  color: #bfc2cc;
+  font-size: 14px;
+}
+.inv-card .avail {
+  margin: 0;
+  color: #eaeaea;
+  font-weight: 600;
+}
 
 /* Footer */
 footer { padding: 20px 0 40px; color: #a8a8b0; }
