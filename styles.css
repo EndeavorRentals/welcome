@@ -1,0 +1,86 @@
+/* Endeavor Rentals - Minimal, modern, responsive */
+:root{
+  --bg:#0b0f14;
+  --panel:#11161d;
+  --text:#e8eef7;
+  --muted:#97a3b6;
+  --accent:#ff4337;
+  --accent-2:#00d3ff;
+  --ring: rgba(0, 211, 255, .35);
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
+  --radius: 14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1100px,92%);margin-inline:auto}
+/* Header */
+.header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(1.2) blur(6px);
+  background:linear-gradient(180deg,rgba(11,15,20,.9),rgba(11,15,20,.6));
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{display:flex;align-items:center;gap:20px;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:40px;height:40px;border-radius:8px;object-fit:cover;border:1px solid rgba(255,255,255,.1)}
+.brand .name{font-weight:700;letter-spacing:.4px}
+.nav .cta{display:flex;gap:10px}
+.button{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#16202b,#0f151c);box-shadow:var(--shadow);color:var(--text);font-weight:600}
+.button:hover{box-shadow:0 0 0 3px var(--ring)}
+.button.accent{background:linear-gradient(180deg,#ff5a4f,#ff4337);border-color:#ff4337;color:#0a0a0a}
+.button.call{background:linear-gradient(180deg,#1f2937,#111827)}
+
+/* Hero */
+.hero{position:relative;isolation:isolate}
+.hero .bg{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(60% 60% at 10% 10%, rgba(0,211,255,.08), transparent 60%),
+    radial-gradient(60% 60% at 90% 10%, rgba(255,67,55,.12), transparent 60%),
+    url('../img/card_front.jpg') center/cover no-repeat fixed;
+  filter: saturate(1.15) contrast(1.05) brightness(.9);
+}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,10,.55),rgba(5,7,10,.85));z-index:-1}
+.hero .content{padding:76px 0 64px; text-align:center}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.1;margin:0 0 10px}
+.subtitle{color:var(--muted);margin:0 0 22px}
+.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.badge{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--text)}
+
+/* Panels */
+.section{padding:56px 0}
+.panel{background:linear-gradient(180deg,#101720,#0a0f15);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}
+.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}}
+
+.card{padding:18px;border-radius:12px;background:#0c1218;border:1px solid rgba(255,255,255,.08)}
+.card h3{margin:0 0 6px}
+.card .price{font-size:26px;font-weight:800;letter-spacing:.3px}
+.card .note{color:var(--muted);font-size:.95rem}
+
+/* Requirements strip */
+.requirements{display:flex;gap:14px;flex-wrap:wrap}
+.requirements .pill{background:#0e141b;border:1px solid rgba(255,255,255,.1);padding:10px 12px;border-radius:10px}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+
+/* Form */
+form{display:grid;gap:12px}
+.input{display:grid;gap:6px}
+input,select,textarea{
+  background:#0a0f15;border:1px solid rgba(255,255,255,.12);border-radius:10px;color:var(--text);
+  padding:12px 14px;outline:none
+}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--ring);border-color:var(--accent-2)}
+label{color:var(--muted);font-weight:600;font-size:.95rem}
+.helper{color:var(--muted);font-size:.9rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+footer{padding:36px 0;color:var(--muted)}
+hr{border:none;border-top:1px solid rgba(255,255,255,.08);margin:22px 0}
+small{color:var(--muted)}
