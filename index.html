@@ -1,11 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Endeavor Car Rentals — Pittsburgh</title>
   <meta name="description" content="Premium weekly car rentals in Pittsburgh. Compact, Full Size, SUV, and Luxury. Rent-to-Own options. 24/7 reservations.">
   <link rel="icon" type="image/png" href="favicon.PNG?v=3">
-<link rel="apple-touch-icon" href="favicon.PNG?v=3">
-  <link rel="preload" as="image" href="card_front.jpg">
+  <link rel="apple-touch-icon" href="favicon.PNG?v=3">
   <link rel="stylesheet" href="styles.css">
   <script defer src="main.js"></script>
 
@@ -24,13 +25,13 @@
   }
   </script>
 </head>
+
 <body>
 <header class="header">
   <div class="container nav">
     <div class="brand">
-  <img src="favicon.png" alt="Endeavor logo">
-  <div class="name">Endeavor Car Rentals</div>
-</div>
+      <div class="name">Endeavor Car Rentals</div>
+    </div>
     <div class="cta">
       <a class="button call" href="tel:+14123390109">Call</a>
       <a class="button accent" href="#book">Book Now</a>
@@ -43,7 +44,7 @@
   <div class="overlay"></div>
   <div class="container content">
     <h1>Rent. Drive. Repeat.</h1>
-    <p class="subtitle">Weekly rentals with simple terms & fast pickup. Rent‑to‑Own available.</p>
+    <p class="subtitle">Weekly rentals with simple terms & fast pickup. Rent-to-Own available.</p>
     <div class="badges">
       <span class="badge">Pittsburgh • 24/7</span>
       <span class="badge">Deposit $150</span>
@@ -89,20 +90,51 @@
         <span class="pill">Drivers License</span>
         <span class="pill">$150 Refundable Deposit</span>
         <span class="pill">$50/week Insurance</span>
-        <span class="pill">Rent‑to‑Own Available</span>
+        <span class="pill">Rent-to-Own Available</span>
       </div>
       <p class="helper" style="margin-top:8px">Ask about payment plans on select vehicles.</p>
     </div>
 
     <div class="panel">
       <h2 style="margin:4px 0 14px">About</h2>
-      <p>Endeavor is a premium car rental service remotely based in Pittsburgh. We keep things simple: weekly pricing, fast pickup, and clear terms. If you're building toward ownership, our Rent‑to‑Own path can help you get there.</p>
+      <p>Endeavor is a premium car rental service remotely based in Pittsburgh. We keep things simple: weekly pricing, fast pickup, and clear terms. If you're building toward ownership, our Rent-to-Own path can help you get there.</p>
       <div class="gallery" style="margin-top:14px">
-<img src="card_front.jpg" alt="Endeavor interior 1">
-<img src="card_back.jpg" alt="Endeavor brand">
+        <img src="card_front.jpg" alt="Endeavor car rental brand">
+        <img src="card_back.jpg" alt="Endeavor card back">
       </div>
-      <p class="helper" style="margin-top:10px">For reservations call or text <a href="tel:+14123390109">412‑339‑0109</a>, <a href="tel:+14124051109">412‑405‑1109</a>, or <a href="tel:+14125041109">412‑504‑1109</a>.</p>
+      <p class="helper" style="margin-top:10px">
+        For reservations call or text <a href="tel:+14123390109">412-339-0109</a>, 
+        <a href="tel:+14124051109">412-405-1109</a>, or 
+        <a href="tel:+14125041109">412-504-1109</a>.
+      </p>
     </div>
+  </div>
+</section>
+
+<!-- INVENTORY SECTION -->
+<section class="section" id="inventory">
+  <div class="container">
+    <h2 style="margin:4px 0 14px">Current Inventory</h2>
+
+    <div class="panel" style="margin-bottom:14px">
+      <div class="grid cols-2">
+        <div class="input">
+          <label for="invSearch">Search (make/model/color)</label>
+          <input id="invSearch" placeholder="e.g., Altima, silver, 2015">
+        </div>
+        <div class="input">
+          <label for="invSort">Sort by</label>
+          <select id="invSort">
+            <option value="year_desc">Year (newest)</option>
+            <option value="year_asc">Year (oldest)</option>
+            <option value="make_az">Make (A–Z)</option>
+            <option value="make_za">Make (Z–A)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="inventoryGrid" class="grid cols-2"></div>
   </div>
 </section>
 
@@ -118,7 +150,7 @@
           </div>
           <div class="input">
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" inputmode="tel" required placeholder="412‑555‑0199">
+            <input id="phone" name="phone" inputmode="tel" required placeholder="412-555-0199">
           </div>
         </div>
         <div class="grid cols-2">
@@ -160,10 +192,10 @@
         </div>
         <div class="actions">
           <button type="submit" class="button accent">Text Request</button>
-          <a class="button call" href="tel:+14123390109">Call 412‑339‑0109</a>
+          <a class="button call" href="tel:+14123390109">Call 412-339-0109</a>
           <a class="button" id="emailBtn" href="#">Email</a>
         </div>
-        <small class="helper">Submitting will open your SMS app with a pre‑filled message. No data is stored on this site.</small>
+        <small class="helper">Submitting will open your SMS app with a pre-filled message. No data is stored on this site.</small>
       </form>
     </div>
     <div class="panel">
@@ -173,9 +205,9 @@
       <hr>
       <h3>Quick Contacts</h3>
       <p>
-        <a href="tel:+14123390109">412‑339‑0109</a><br>
-        <a href="tel:+14124051109">412‑405‑1109</a><br>
-        <a href="tel:+14125041109">412‑504‑1109</a>
+        <a href="tel:+14123390109">412-339-0109</a><br>
+        <a href="tel:+14124051109">412-405-1109</a><br>
+        <a href="tel:+14125041109">412-504-1109</a>
       </p>
       <p class="helper">Prefer to text? Use the request form to send us everything we need to get you rolling.</p>
     </div>
