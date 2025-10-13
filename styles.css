@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #eaeaea; background: #0b0b0e;
+  color: #ececf1; background: #0b0b0e;
 }
 a { color: #e6e6e6; text-decoration: none; }
 .container { width: min(1100px, 92%); margin: 0 auto; }
@@ -12,7 +12,6 @@ hr { border: 0; border-top: 1px solid #292933; margin: 16px 0; }
 /* Header */
 .header { position: sticky; top: 0; z-index: 20; background: rgba(12,12,16,0.85); backdrop-filter: blur(6px); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
-.brand { display: flex; align-items: center; gap: 10px; }
 .brand .name { font-weight: 800; letter-spacing: .3px; }
 
 /* Buttons */
@@ -54,61 +53,45 @@ hr { border: 0; border-top: 1px solid #292933; margin: 16px 0; }
 .note, .helper { color: #aeb0b8; }
 
 /* Pills */
-.pill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #16161f; border:1px solid #2a2a36; margin: 4px 6px 0 0; }
-
-/* Gallery */
-.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.gallery img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; border:1px solid #242432; }
-
-/* Inventory headline */
-.inventory-title {
-  font-size: clamp(32px, 7vw, 64px);
-  line-height: 1.1;
-  text-align: left;
-  margin: 0 0 18px;
-  font-weight: 900;
+.pill {
+  display:inline-block; padding:6px 10px; border-radius:999px;
+  background:#14141b; border:1px solid #2a2a36; color:#d8d8de; margin:4px 6px 0 0;
 }
 
-/* Photo grid layout */
-.inventory-grid.gallery-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 22px;
+/* Gallery images (no crop) */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 10px; }
+.gallery img {
+  width: 100%; height: 180px; object-fit: contain; /* no crop */
+  background:#0d0d11; border:1px solid #242432; border-radius:10px; padding:6px;
 }
 
-/* Card look */
-.inv-card { background: transparent; border-radius: 12px; overflow: hidden; }
-.inv-card img {
-  width: 100%;
-  height: auto;           /* keep full photo */
-  object-fit: contain;    /* NO cropping */
-  background:#0b0b0e;     /* blends any letterbox */
-  border-radius: 10px;
-  display: block;
-}
+/* Inventory cards (optional section) */
+.inventory-title { margin: 0 0 12px; }
+.inventory-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px; }
+.inv-card { background:#0f0f13; border:1px solid #242432; border-radius:12px; padding:12px; }
+.inv-card img { width:100%; height:170px; object-fit:contain; border-radius:8px; background:#0d0d11; }
+.inv-card h3 { margin:8px 0 4px; }
+.inv-card .meta { color:#b9bbc5; margin:0 0 6px; }
+.inv-card .avail { color:#9be29b; }
 
-/* Text below image */
-.inv-card h3 { margin: 10px 0 4px; font-size: 20px; color: #fff; }
-.inv-card .meta { margin: 0 0 10px; color: #bfc2cc; font-size: 14px; }
-.inv-card .avail { margin: 0; color: #eaeaea; font-weight: 600; }
-
-/* Big inventory photo above contact form */
+/* Big inventory image */
 .inventory-image {
-  display: block;
   width: 100%;
-  max-width: 900px;
-  margin: 6px auto 0;
+  height: auto;
+  display: block;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+  margin-bottom: 24px;
+  object-fit: contain; /* keeps full image visible */
+  background:#0d0d11; border:1px solid #242432;
 }
+
+/* Form */
+.input { display:flex; flex-direction:column; gap:6px; }
+input, select, textarea {
+  width:100%; padding:12px 12px; border-radius:10px; border:1px solid #2a2a36;
+  background:#0d0d14; color:#f0f0f2;
+}
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
 
 /* Footer */
-footer { padding: 20px 0 40px; color: #a8a8b0; }
-
-/* Inputs */
-.input { display: grid; gap: 6px; }
-input, select, textarea {
-  width: 100%; padding: 10px 12px; border-radius: 8px;
-  background: #0f0f14; border: 1px solid #242432; color: #eaeaea;
-}
-.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+footer small { color:#aeb0b8; display:inline-block; padding:10px 0; }
