@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Endeavor Car Rentals — Pittsburgh</title>
   <meta name="description" content="Premium weekly car rentals in Pittsburgh. Compact, Full Size, SUV, and Luxury. Rent-to-Own options. 24/7 reservations.">
-  <!-- Use the exact filename you have in the repo -->
+  <!-- Use the exact case that exists in your repo -->
   <link rel="icon" type="image/png" href="favicon.PNG?v=3">
   <link rel="apple-touch-icon" href="favicon.PNG?v=3">
   <link rel="stylesheet" href="styles.css">
@@ -110,73 +110,122 @@
   </div>
 </section>
 
-<!-- INVENTORY (with lightbox) -->
+<!-- PHOTO-GRID INVENTORY -->
 <section class="section" id="inventory">
   <div class="container">
-    <h2 style="margin:4px 0 14px; text-align:center;">Available Inventory</h2>
-    <p class="helper" style="text-align:center; margin-bottom:20px;">
-      Tap any vehicle to view larger — available for weekly and Rent-to-Own programs.
-    </p>
+    <h2 class="inventory-title">Inventory</h2>
 
-    <div class="inventory-grid">
-      <div class="inventory-card">
-        <img src="assets/inventory/accord.jpg" alt="2007 Honda Accord Silver" onclick="openLightbox(this)">
-        <h3>2007 Honda Accord</h3><p>Silver • Sedan</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/altima.jpg" alt="2005 Nissan Altima Green" onclick="openLightbox(this)">
-        <h3>2005 Nissan Altima</h3><p>Green • Sedan</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/altima.jpg" alt="2010 Nissan Altima White" onclick="openLightbox(this)">
-        <h3>2010 Nissan Altima</h3><p>White • Sedan</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/traverse.jpg" alt="2012 Chevy Traverse Navy" onclick="openLightbox(this)">
-        <h3>2012 Chevy Traverse</h3><p>Navy • SUV</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/impala.jpg" alt="2009 Chevy Impala Red" onclick="openLightbox(this)">
-        <h3>2009 Chevy Impala</h3><p>Red • Sedan</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/deville.jpg" alt="2010 Cadillac Deville Silver" onclick="openLightbox(this)">
-        <h3>2010 Cadillac Deville</h3><p>Silver • Luxury</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/townandcountry.jpg" alt="2014 Town & Country Navy" onclick="openLightbox(this)">
-        <h3>2014 Town & Country</h3><p>Navy • Van</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/cruze.jpg" alt="2015 Chevy Cruze Navy" onclick="openLightbox(this)">
-        <h3>2015 Chevy Cruze</h3><p>Navy • Sedan</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/escape.jpg" alt="2005 Ford Escape" onclick="openLightbox(this)">
-        <h3>2005 Ford Escape</h3><p>Compact SUV</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/forester.jpg" alt="2015 Subaru Forester White" onclick="openLightbox(this)">
-        <h3>2015 Subaru Forester</h3><p>White • SUV</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/civic.jpg" alt="2009 Honda Civic Silver" onclick="openLightbox(this)">
-        <h3>2009 Honda Civic</h3><p>Silver • Sedan</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/insight.jpg" alt="2014 Honda Insight Grey" onclick="openLightbox(this)">
-        <h3>2014 Honda Insight</h3><p>Grey • Hybrid</p>
-      </div>
-      <div class="inventory-card">
-        <img src="assets/inventory/prius.jpg" alt="2011 Toyota Prius White" onclick="openLightbox(this)">
-        <h3>2011 Toyota Prius</h3><p>White • Hybrid</p>
-      </div>
+    <div class="inventory-grid gallery-cards">
+      <!-- Row 1 -->
+      <article class="inv-card">
+        <img src="assets/inventory/accord.jpg" alt="2007 Honda Accord Silver">
+        <h3>2007 Honda Accord</h3>
+        <p class="meta"><span>Silver</span> • <span>Full Size</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/altima.jpg" alt="2005 Nissan Altima Green">
+        <h3>2005 Nissan Altima</h3>
+        <p class="meta"><span>Green</span> • <span>Midsize</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/altima.jpg" alt="2010 Nissan Altima White">
+        <h3>2010 Nissan Altima</h3>
+        <p class="meta"><span>White</span> • <span>Midsize</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <!-- Row 2 -->
+      <article class="inv-card">
+        <img src="assets/inventory/traverse.jpg" alt="2012 Chevy Traverse Navy">
+        <h3>2012 Chevy Traverse</h3>
+        <p class="meta"><span>Navy</span> • <span>SUV</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/impala.jpg" alt="2009 Chevy Impala Red">
+        <h3>2009 Chevy Impala</h3>
+        <p class="meta"><span>Red</span> • <span>Full Size</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/deville.jpg" alt="2010 Cadillac Deville Silver">
+        <h3>2010 Cadillac Deville</h3>
+        <p class="meta"><span>Silver</span> • <span>Luxury</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <!-- Row 3 -->
+      <article class="inv-card">
+        <img src="assets/inventory/townandcountry.jpg" alt="2014 Town & Country Navy">
+        <h3>2014 Town & Country</h3>
+        <p class="meta"><span>Navy</span> • <span>Van</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/cruze.jpg" alt="2005 Chevy Cruze Silver">
+        <h3>2005 Silver Cruze</h3>
+        <p class="meta"><span>Silver</span> • <span>Compact</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/cruze.jpg" alt="2015 Chevy Cruze Navy">
+        <h3>2015 Chevy Cruze</h3>
+        <p class="meta"><span>Navy</span> • <span>Compact</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <!-- Row 4 -->
+      <article class="inv-card">
+        <img src="assets/inventory/escape.jpg" alt="2005 Ford Escape">
+        <h3>2005 Ford Escape</h3>
+        <p class="meta"><span>—</span> • <span>Compact SUV</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/forester.jpg" alt="2015 Subaru Forester White">
+        <h3>2015 Subaru Forester</h3>
+        <p class="meta"><span>White</span> • <span>SUV</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/civic.jpg" alt="2009 Honda Civic Silver">
+        <h3>2009 Honda Civic</h3>
+        <p class="meta"><span>Silver</span> • <span>Compact</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <!-- Row 5 -->
+      <article class="inv-card">
+        <img src="assets/inventory/insight.jpg" alt="2014 Honda Insight Grey">
+        <h3>2014 Honda Insight</h3>
+        <p class="meta"><span>Grey</span> • <span>Hybrid</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/prius.jpg" alt="2011 Toyota Prius White">
+        <h3>2011 Toyota Prius</h3>
+        <p class="meta"><span>White</span> • <span>Hybrid</span></p>
+        <p class="avail">Available</p>
+      </article>
+
+      <article class="inv-card">
+        <img src="assets/inventory/impala.jpg" alt="2015 Chevy Impala Silver">
+        <h3>2015 Chevy Impala</h3>
+        <p class="meta"><span>Silver</span> • <span>Full Size</span></p>
+        <p class="avail">Available</p>
+      </article>
     </div>
-  </div>
-
-  <!-- Lightbox overlay -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Car photo">
   </div>
 </section>
 
