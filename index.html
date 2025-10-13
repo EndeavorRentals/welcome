@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Endeavor Car Rentals — Pittsburgh</title>
   <meta name="description" content="Premium weekly car rentals in Pittsburgh. Compact, Full Size, SUV, and Luxury. Rent-to-Own options. 24/7 reservations." />
-  <!-- Use exact case that exists in your repo -->
+
+  <!-- IMPORTANT: match exact case of files on GitHub -->
   <link rel="icon" type="image/png" href="favicon.PNG?v=3" />
   <link rel="apple-touch-icon" href="favicon.PNG?v=3" />
+
+  <link rel="preload" as="image" href="card_front.jpg" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="main.js"></script>
 
@@ -21,13 +24,14 @@
     "telephone":"+1-412-339-0109",
     "openingHours":"Mo-Su 00:00-23:59",
     "areaServed":"Pittsburgh, PA",
-    "image":["card_front.jpg","card_back.jpg"],
+    "image":["card_front.jpg","card_back.jpg","inventory_full.PNG"],
     "priceRange":"$$"
   }
   </script>
 </head>
 
 <body>
+<!-- Header -->
 <header class="header">
   <div class="container nav">
     <div class="brand">
@@ -40,6 +44,7 @@
   </div>
 </header>
 
+<!-- Hero -->
 <section class="hero">
   <div class="bg"></div>
   <div class="overlay"></div>
@@ -59,6 +64,7 @@
   </div>
 </section>
 
+<!-- Pricing & About -->
 <section class="section" id="pricing">
   <div class="container grid cols-2">
     <div class="panel">
@@ -86,7 +92,7 @@
         </div>
       </div>
 
-      <hr>
+      <hr />
       <div class="requirements">
         <span class="pill">Drivers License</span>
         <span class="pill">$150 Refundable Deposit</span>
@@ -100,125 +106,38 @@
       <h2 style="margin:4px 0 14px">About</h2>
       <p>Endeavor is a premium car rental service remotely based in Pittsburgh. We keep things simple: weekly pricing, fast pickup, and clear terms. If you're building toward ownership, our Rent-to-Own path can help you get there.</p>
       <div class="gallery" style="margin-top:14px">
-        <img src="card_front.jpg" alt="Endeavor brand">
-        <img src="card_back.jpg" alt="Endeavor brand alt">
+        <img src="card_front.jpg" alt="Endeavor interior" />
+        <img src="card_back.jpg" alt="Endeavor brand" />
       </div>
-      <p class="helper" style="margin-top:10px">For reservations call or text
+      <p class="helper" style="margin-top:10px">
+        For reservations call or text
         <a href="tel:+14123390109">412-339-0109</a>, <a href="tel:+14124051109">412-405-1109</a>, or <a href="tel:+14125041109">412-504-1109</a>.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Photo-grid Inventory -->
+<!-- Inventory (optional cards; keep/remove as you wish) -->
 <section class="section" id="inventory">
   <div class="container">
     <h2 class="inventory-title">Inventory</h2>
     <div class="inventory-grid gallery-cards">
-      <!-- sample cards; keep or edit as needed -->
+      <!-- Example card format; duplicate or remove as needed -->
       <article class="inv-card">
-        <img src="assets/inventory/accord.jpg" alt="2007 Honda Accord Silver">
-        <h3>2007 Honda Accord</h3>
-        <p class="meta"><span>Silver</span> • <span>Full Size</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/altima.jpg" alt="2005 Nissan Altima Green">
-        <h3>2005 Nissan Altima</h3>
-        <p class="meta"><span>Green</span> • <span>Midsize</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/altima.jpg" alt="2010 Nissan Altima White">
-        <h3>2010 Nissan Altima</h3>
-        <p class="meta"><span>White</span> • <span>Midsize</span></p>
-        <p class="avail">Available</p>
-      </article>
-
-      <article class="inv-card">
-        <img src="assets/inventory/traverse.jpg" alt="2012 Chevy Traverse Navy">
-        <h3>2012 Chevy Traverse</h3>
-        <p class="meta"><span>Navy</span> • <span>SUV</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/impala.jpg" alt="2009 Chevy Impala Red">
-        <h3>2009 Chevy Impala</h3>
-        <p class="meta"><span>Red</span> • <span>Full Size</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/deville.jpg" alt="2010 Cadillac Deville Silver">
-        <h3>2010 Cadillac Deville</h3>
-        <p class="meta"><span>Silver</span> • <span>Luxury</span></p>
-        <p class="avail">Available</p>
-      </article>
-
-      <article class="inv-card">
-        <img src="assets/inventory/townandcountry.jpg" alt="2014 Town & Country Navy">
-        <h3>2014 Town & Country</h3>
-        <p class="meta"><span>Navy</span> • <span>Van</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/cruze.jpg" alt="2005 Chevy Cruze Silver">
-        <h3>2005 Silver Cruze</h3>
-        <p class="meta"><span>Silver</span> • <span>Compact</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/cruze.jpg" alt="2015 Chevy Cruze Navy">
-        <h3>2015 Chevy Cruze</h3>
-        <p class="meta"><span>Navy</span> • <span>Compact</span></p>
-        <p class="avail">Available</p>
-      </article>
-
-      <article class="inv-card">
-        <img src="assets/inventory/escape.jpg" alt="2005 Ford Escape">
-        <h3>2005 Ford Escape</h3>
-        <p class="meta"><span>—</span> • <span>Compact SUV</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/forester.jpg" alt="2015 Subaru Forester White">
-        <h3>2015 Subaru Forester</h3>
-        <p class="meta"><span>White</span> • <span>SUV</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/civic.jpg" alt="2009 Honda Civic Silver">
-        <h3>2009 Honda Civic</h3>
-        <p class="meta"><span>Silver</span> • <span>Compact</span></p>
-        <p class="avail">Available</p>
-      </article>
-
-      <article class="inv-card">
-        <img src="assets/inventory/insight.jpg" alt="2014 Honda Insight Grey">
-        <h3>2014 Honda Insight</h3>
-        <p class="meta"><span>Grey</span> • <span>Hybrid</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/prius.jpg" alt="2011 Toyota Prius White">
-        <h3>2011 Toyota Prius</h3>
-        <p class="meta"><span>White</span> • <span>Hybrid</span></p>
-        <p class="avail">Available</p>
-      </article>
-      <article class="inv-card">
-        <img src="assets/inventory/impala.jpg" alt="2015 Chevy Impala Silver">
-        <h3>2015 Chevy Impala</h3>
-        <p class="meta"><span>Silver</span> • <span>Full Size</span></p>
+        <img src="card_front.jpg" alt="Sample vehicle">
+        <h3>Sample Vehicle</h3>
+        <p class="meta"><span>Color</span> • <span>Class</span></p>
         <p class="avail">Available</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- BOOK / CONTACT — inventory_full image appears at the top of this section -->
+<!-- Book / Contact (BIG IMAGE FIRST) -->
 <section class="section" id="book">
   <div class="container">
-    <!-- NEW: Uncropped inventory image -->
-    <img src="inventory_full.jpg" alt="Endeavor Inventory Overview" class="inventory-image" />
+    <!-- Use EXACT filename/case from your repo -->
+    <img src="inventory_full.PNG" alt="Endeavor Inventory Overview" class="inventory-image" />
 
     <div class="grid cols-2" style="margin-top:18px">
       <div class="panel">
@@ -227,17 +146,17 @@
           <div class="grid cols-2">
             <div class="input">
               <label for="name">Full Name</label>
-              <input id="name" name="name" required placeholder="Jordan Example">
+              <input id="name" name="name" required placeholder="Jordan Example" />
             </div>
             <div class="input">
               <label for="phone">Phone</label>
-              <input id="phone" name="phone" inputmode="tel" required placeholder="412-555-0199">
+              <input id="phone" name="phone" inputmode="tel" required placeholder="412-555-0199" />
             </div>
           </div>
           <div class="grid cols-2">
             <div class="input">
               <label for="email">Email (optional)</label>
-              <input id="email" name="email" inputmode="email" placeholder="you@example.com">
+              <input id="email" name="email" inputmode="email" placeholder="you@example.com" />
             </div>
             <div class="input">
               <label for="class">Vehicle Class</label>
@@ -253,7 +172,7 @@
           <div class="grid cols-2">
             <div class="input">
               <label for="pickupDate">Pickup Date</label>
-              <input type="date" id="pickupDate" name="pickupDate" required>
+              <input type="date" id="pickupDate" name="pickupDate" required />
             </div>
             <div class="input">
               <label for="weeks">How many weeks?</label>
@@ -276,7 +195,7 @@
             <a class="button call" href="tel:+14123390109">Call 412-339-0109</a>
             <a class="button" id="emailBtn" href="#">Email</a>
           </div>
-          <small class="helper">Submitting will open your SMS app with a pre-filled message. No data is stored on this site.</small>
+          <small class="helper">Submitting opens your SMS app with a pre-filled message. No data is stored on this site.</small>
         </form>
       </div>
 
@@ -284,11 +203,11 @@
         <h2 style="margin:4px 0 14px">Location & Hours</h2>
         <p>Pittsburgh, Pennsylvania • Service available citywide.</p>
         <p class="helper">Open 24/7 for reservations and support.</p>
-        <hr>
+        <hr />
         <h3>Quick Contacts</h3>
         <p>
-          <a href="tel:+14123390109">412-339-0109</a><br>
-          <a href="tel:+14124051109">412-405-1109</a><br>
+          <a href="tel:+14123390109">412-339-0109</a><br />
+          <a href="tel:+14124051109">412-405-1109</a><br />
           <a href="tel:+14125041109">412-504-1109</a>
         </p>
         <p class="helper">Prefer to text? Use the request form to send us everything we need to get you rolling.</p>
