@@ -77,35 +77,38 @@ hr { border: 0; border-top: 1px solid #292933; margin: 16px 0; }
 }
 
 /* Card look */
-.inv-card {
-  background: transparent;
-  border-radius: 12px;
-  overflow: hidden;
-}
+.inv-card { background: transparent; border-radius: 12px; overflow: hidden; }
 .inv-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;           /* keep full photo */
+  object-fit: contain;    /* NO cropping */
+  background:#0b0b0e;     /* blends any letterbox */
   border-radius: 10px;
   display: block;
 }
 
 /* Text below image */
-.inv-card h3 {
-  margin: 10px 0 4px;
-  font-size: 20px;
-  color: #fff;
-}
-.inv-card .meta {
-  margin: 0 0 10px;
-  color: #bfc2cc;
-  font-size: 14px;
-}
-.inv-card .avail {
-  margin: 0;
-  color: #eaeaea;
-  font-weight: 600;
+.inv-card h3 { margin: 10px 0 4px; font-size: 20px; color: #fff; }
+.inv-card .meta { margin: 0 0 10px; color: #bfc2cc; font-size: 14px; }
+.inv-card .avail { margin: 0; color: #eaeaea; font-weight: 600; }
+
+/* Big inventory photo above contact form */
+.inventory-image {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 6px auto 0;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
 }
 
 /* Footer */
 footer { padding: 20px 0 40px; color: #a8a8b0; }
+
+/* Inputs */
+.input { display: grid; gap: 6px; }
+input, select, textarea {
+  width: 100%; padding: 10px 12px; border-radius: 8px;
+  background: #0f0f14; border: 1px solid #242432; color: #eaeaea;
+}
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
